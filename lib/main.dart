@@ -29,66 +29,52 @@ class AcademiaFortressApp extends StatelessWidget {
       title: 'AcademiaFortress',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: const Color(0xFF0D0D0D),
-        primaryColor: const Color(0xFFE0FF00), // Neon Green/Yellow brutalist accent
-        colorScheme: const ColorScheme.dark(
-          primary: Color(0xFFE0FF00),
-          secondary: Color(0xFFFF3366),
-          surface: Color(0xFF1A1A1A),
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: const Color(0xFFFEFBEA),
+        primaryColor: const Color(0xFFFFD600),
+        colorScheme: const ColorScheme.light(
+          primary: Color(0xFFFFD600),
+          secondary: Colors.black,
+          surface: Color(0xFFFEFBEA),
         ),
-        fontFamily: 'Courier', // Brutalist monospace feel
+        fontFamily: 'Roboto',
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFF0D0D0D),
+          backgroundColor: Colors.white,
           elevation: 0,
-          titleTextStyle: TextStyle(
-            color: Colors.white,
-            fontSize: 24,
-            fontWeight: FontWeight.w900,
-            letterSpacing: -1,
-          ),
-          iconTheme: IconThemeData(color: Colors.white),
+          iconTheme: IconThemeData(color: Colors.black),
         ),
-        cardTheme: const CardThemeData(
-          color: Color(0xFF1A1A1A),
-          elevation: 0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.zero, // 0px border radius
-            side: BorderSide(color: Color(0xFF333333), width: 1),
-          ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Colors.white,
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.black45,
+          type: BottomNavigationBarType.fixed,
+          showUnselectedLabels: true,
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFFE0FF00),
-            foregroundColor: Colors.black,
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.zero,
-            ),
+            backgroundColor: Colors.black,
+            foregroundColor: Colors.white,
+            shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
             padding: const EdgeInsets.symmetric(vertical: 16),
-            textStyle: const TextStyle(fontWeight: FontWeight.bold),
+            textStyle: const TextStyle(fontWeight: FontWeight.w900, letterSpacing: 1),
           ),
         ),
         inputDecorationTheme: const InputDecorationTheme(
           filled: true,
-          fillColor: Color(0xFF1A1A1A),
+          fillColor: Color(0xFFF5F0DC),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.zero,
-            borderSide: BorderSide(color: Color(0xFF333333)),
+            borderSide: BorderSide(color: Colors.black, width: 2),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.zero,
-            borderSide: BorderSide(color: Color(0xFF333333)),
+            borderSide: BorderSide(color: Colors.black, width: 2),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.zero,
-            borderSide: BorderSide(color: Color(0xFFE0FF00)),
+            borderSide: BorderSide(color: Color(0xFFFFD600), width: 2.5),
           ),
-        ),
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          backgroundColor: Color(0xFF0D0D0D),
-          selectedItemColor: Color(0xFFE0FF00),
-          unselectedItemColor: Colors.grey,
-          type: BottomNavigationBarType.fixed,
+          labelStyle: TextStyle(color: Colors.black54),
         ),
       ),
       initialRoute: '/',
